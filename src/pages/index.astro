@@ -1,9 +1,15 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro"
+import Showcase from "../components/Showcase.astro";
 import '../styles/global.css'
 ---
 
 
 <Layout>
-	<h1 class="text-3xl">Test</h1>
+    <div class="flex flex-col justify-center container mx-auto">
+        <Showcase />
+        <div class="p-3 flex justify-center mb-16">
+            <iframe class="w-[94vw] h-[250px] md:w-[90vw] md:h-[350px]" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d975.5176119521151!2d75.35576668121843!3d12.038671064628199!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba43ff117d08477%3A0xfaaeefbf3431485a!2s29Q4%2BJMJ%2C%20Pulimparamba%20-%20Manthamkunu%20-%20Palayad%20-%20Taliparamba%20Road%2C%20Pulimparamba%2C%20Taliparamba%2C%20Kerala%20670141!5e0!3m2!1sen!2sin!4v1662398168349!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
 </Layout>

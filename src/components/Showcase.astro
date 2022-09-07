@@ -1,0 +1,23 @@
+---
+import BgSmall from '../images/bgsmall.webp'
+import ShowcaseImg from '../images/showcase-image.webp';
+
+const { 
+    title = "Need A Survey?",
+    content = "WE SPECIALIZE IN LAND SURVEYING AND DATA COLLECTION THROUGHOUT THE STATE", 
+    button = "Start a Project",
+    subTitle = "If you are selling property, you may have to provide the buyer with an up-to-date survey of your property"
+} = Astro.props;
+---
+
+<div class="grid grid-cols-1 lg:grid-cols-12 items-end container mx-auto mb-10">
+    <div class="flex flex-col justify-center col-span-5 gap-2 lg:gap-4 text-center lg:text-left pb-10 px-4 lg:pl-7 xl:pl-10">
+        <h1 class={title ? "text-3xl font-[900] text-slate-600 md:text-4xl lg:text-4xl 2xl:text-5xl mb-4 mt-10 lg:mt-0" : "hidden"}>{title}</h1>
+        <p class=" text-[1.2rem] md:text-2xl lg:text-[1.5rem] 2xl:text-[1.65rem] font-[300]">{subTitle}</p>
+        <p class={content ? "text-[1.1rem] md:text-2xl font-[400] lg:text-[1.3rem] lg:text-[1.5rem] text-slate-700" : "hidden"}>{content}</p>
+        <div class="mt-[6vw] md:mt-[1.7rem]">
+            <button class={button ? "text-[1rem] md:text-[1.075rem] lg:text-[1.15rem] 2xl:text-[1.25rem] text-white shadow-md h-fit md:justify-self-start px-7 py-4 2xl:px-9 2xl:py-5 uppercase font-bold bg-indigo-500 rounded-full" : "hidden"}>{button}</button>
+        </div>
+    </div>
+    <img class='lg:col-span-7' src={ShowcaseImg} alt="">
+</div>
