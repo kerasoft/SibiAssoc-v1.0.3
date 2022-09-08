@@ -1,0 +1,87 @@
+<div class="flex justify-center w-full py-12">
+    <div class="grid grid-cols-1 lg:grid-cols-6 lg:gap-2 w-[95vw]">
+        <div class="left-div relative col-span-2 flex flex-col place-self-center">
+            <div class="flex flex-col text-center text-[1.4rem] lg:text-[1.5rem] font-[300] mb-10">
+                <i class="fa-solid fa-location-dot text-[2.1rem] lg:text-[1.95rem] text-indigo-600 mb-2"></i>
+                <p class="text-[1.7rem] md:text-3xl lg:text-[1.7rem] font-[600]">Address</p>
+                <p>#207 Goethhops Apt, </p>
+                <p>Wentworth Falls Iyola,</p>
+                <p>Australia 50032</p>
+                <p class="text-[1.25rem] lg:text-[1.35rem] font-[300] mt-2">40.741895, -73.989308</p>
+            </div>
+            <div class="flex flex-col text-center text-[1.4rem] lg:text-[1.5rem] font-[300] mb-10">
+                <i class="fa-solid fa-phone text-[2.1rem] lg:text-[1.95rem] text-indigo-600 mb-2"></i>
+                <p class="text-[1.7rem] md:text-3xl lg:text-[1.7rem] font-[600]">Phone</p>
+                <a href="tel:00911234567890">+91 1234567890</a>
+                <a href="tel:00911234567890">+91 1234567890</a>
+            </div>
+            <div class="flex flex-col text-center text-[1.4rem] lg:text-[1.5rem] font-[300] mb-10">
+                <i class="fa-solid fa-envelope text-[2.1rem] lg:text-[1.95rem] text-indigo-600 mb-2"></i>
+                <p class="text-[1.7rem] md:text-3xl lg:text-[1.7rem] font-[600]">Email</p>
+                <a href="mailto:test@testmail.test">test@testmail.test</a>
+                <a href="mailto:test@testmail.test">test@testmail.test</a>
+            </div>
+        </div>
+        <div class="col-span-4">
+            <div class="flex flex-col items-center lg:mt-20">
+                <form action="POST" class="px-4 w-full max-w-[40rem]">
+                    <div class="mb-3 lg:mb-6">
+                        <label for="name" class="block text-[1.25rem] lg:text-[1.4rem] mb-1 lg:mb-2 pl-4 text-slate-600">Name</label>
+                        <input class="border-[1px] border-indigo-500 w-full rounded-md p-2 lg:p-3 text-xl placeholder:text-[1.2rem] lg:placeholder:text-[1.4rem]" type="text" placeholder="John Doe" id="name">
+                    </div>
+                    <div class="mb-3 lg:mb-6">
+                        <label for="email" class="block text-[1.25rem] lg:text-[1.4rem] mb-1 lg:mb-2 pl-4 text-slate-600">Email</label>
+                        <input class="border-[1px] border-indigo-500 w-full rounded-md p-2 lg:p-3 text-xl placeholder:text-[1.2rem] lg:placeholder:text-[1.4rem]" type="email" placeholder="john@company.com" id="email">
+                    </div>
+                    <div class="mb-3 lg:mb-6">
+                        <label for="phone" class="block text-[1.25rem] lg:text-[1.4rem] mb-1 lg:mb-2 pl-4 text-slate-600">Phone</label>
+                        <input class="border-[1px] border-indigo-500 w-full rounded-md p-2 lg:p-3 text-xl placeholder:text-[1.2rem] lg:placeholder:text-[1.4rem]" type="number" placeholder="9447123456" id="phone">
+                    </div>
+                    <div class="mb-3 lg:mb-6">
+                        <label class="block text-[1.25rem] lg:text-[1.4rem] mb-1 lg:mb-2 pl-4 text-slate-600" for="message">Message</label>
+                        <textarea class="p-2 border-[1px] rounded-md border-indigo-500 w-full placeholder:text-[1.2rem] lg:placeholder:text-[1.25rem]" id="message" cols="30" rows="5" placeholder="Tell us how can we help you"></textarea>
+                    </div>
+                    <div class="w-full text-center lg:text-left">
+                        <button class="uppercase w-full lg:w-[initial] md:max-w-[40rem] lg:min-w-[12rem] font-[600] py-3 text-white rounded-md bg-indigo-600" type="submit">send now</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<style>
+    @media (min-width: 1220px) {
+        .left-div::after {
+            content: '';
+            position: absolute;
+            height: 70%;
+            width: 2px;
+            border-right: 2px solid #2225;
+            right: -6rem;
+            top: 50%;
+            transform: translateY(-50%);
+            box-shadow: 0 0 10px #2227;
+            clip-path: inset(0px -10px 0px 0px);
+        }
+    }
+
+    input,
+    input:focus,
+    input:active,
+    textarea {
+        outline: 0;
+        text-indent: 4px;
+    }
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    }
+
+    input[type=number] {
+    -moz-appearance: textfield;
+    }
+</style>

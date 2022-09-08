@@ -1,7 +1,12 @@
 ---
+import Form from "../components/Form.astro";
 import Layout from "../layouts/Layout.astro"
 ---
 
 <Layout title = "Contact">
-
+    <div class="container mx-auto px-8">
+        <h1 class="font-[700] text-[1.65rem] lg:text-[2rem] text-indigo-600 text-center mt-6 lg:mt-16 mb-2">Send us a message</h1>
+        <p class="text-[1.2rem] text-gray-600 lg:text-2xl text-center font-[300]">If you have a survey requirement or any queries you may have on our services, <br class="hidden lg:block"> feel free to contact us</p>
+    </div>
+    <Form />
 </Layout>
