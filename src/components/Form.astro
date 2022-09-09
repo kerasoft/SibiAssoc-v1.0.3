@@ -1,4 +1,4 @@
-<div class="flex justify-center w-full py-12">
+<div class="flex justify-center w-full py-6">
     <div class="grid grid-cols-1 lg:grid-cols-6 lg:gap-2 w-[95vw]">
         <div class="left-div relative col-span-2 flex flex-col place-self-center">
             <div class="flex flex-col text-center text-[1.4rem] lg:text-[1.5rem] font-[300] mb-10">
@@ -23,23 +23,28 @@
             </div>
         </div>
         <div class="col-span-4">
-            <div class="flex flex-col items-center lg:mt-20">
-                <form action="POST" class="px-4 w-full max-w-[40rem]">
+            <div class="container mx-auto px-8">
+                <h1 class="font-[700] text-[1.65rem] lg:text-[2rem] text-indigo-600 text-center mt-6 lg:mt-2 mb-1">Send us a message</h1>
+                <p class="text-[1.2rem] text-gray-800 lg:text-2xl text-center font-[300] lg:font-[400]">If you have a survey requirement or any queries you may have on our services, <br class="hidden lg:block"> feel free to contact us.</p>
+            </div>
+            <div class="flex flex-col items-center mt-6 lg:mt-12">
+                <form action="POST" class="px-4 w-full max-w-[40rem]" onsubmit="submit" data-netlify="true" name="Contact" data-netlify-honeypot="bot field">
+                    <input name="bot-field" class="hidden">
                     <div class="mb-3 lg:mb-6">
                         <label for="name" class="block text-[1.25rem] lg:text-[1.4rem] mb-1 lg:mb-2 pl-4 text-slate-600">Name</label>
-                        <input class="border-[1px] border-indigo-500 w-full rounded-md p-2 lg:p-3 text-xl placeholder:text-[1.2rem] lg:placeholder:text-[1.4rem]" type="text" placeholder="John Doe" id="name">
+                        <input class="border-[1px] border-indigo-500 w-full rounded-md p-2 lg:p-3 text-xl placeholder:text-[1.2rem] lg:placeholder:text-[1.4rem]" type="text" placeholder="John Doe" id="name" name="Name">
                     </div>
                     <div class="mb-3 lg:mb-6">
                         <label for="email" class="block text-[1.25rem] lg:text-[1.4rem] mb-1 lg:mb-2 pl-4 text-slate-600">Email</label>
-                        <input class="border-[1px] border-indigo-500 w-full rounded-md p-2 lg:p-3 text-xl placeholder:text-[1.2rem] lg:placeholder:text-[1.4rem]" type="email" placeholder="john@company.com" id="email">
+                        <input class="border-[1px] border-indigo-500 w-full rounded-md p-2 lg:p-3 text-xl placeholder:text-[1.2rem] lg:placeholder:text-[1.4rem]" type="email" placeholder="john@company.com" id="email" name="Email">
                     </div>
                     <div class="mb-3 lg:mb-6">
                         <label for="phone" class="block text-[1.25rem] lg:text-[1.4rem] mb-1 lg:mb-2 pl-4 text-slate-600">Phone</label>
-                        <input class="border-[1px] border-indigo-500 w-full rounded-md p-2 lg:p-3 text-xl placeholder:text-[1.2rem] lg:placeholder:text-[1.4rem]" type="number" placeholder="9447123456" id="phone">
+                        <input class="border-[1px] border-indigo-500 w-full rounded-md p-2 lg:p-3 text-xl placeholder:text-[1.2rem] lg:placeholder:text-[1.4rem]" type="number" placeholder="9447123456" id="phone" name="Phone number">
                     </div>
                     <div class="mb-3 lg:mb-6">
                         <label class="block text-[1.25rem] lg:text-[1.4rem] mb-1 lg:mb-2 pl-4 text-slate-600" for="message">Message</label>
-                        <textarea class="p-2 border-[1px] rounded-md border-indigo-500 w-full placeholder:text-[1.2rem] lg:placeholder:text-[1.25rem]" id="message" cols="30" rows="5" placeholder="Tell us how can we help you"></textarea>
+                        <textarea class="p-2 border-[1px] rounded-md border-indigo-500 w-full placeholder:text-[1.2rem] lg:placeholder:text-[1.4rem]" id="message" cols="30" rows="5" placeholder="Tell us how can we help you" name="Message"></textarea>
                     </div>
                     <div class="w-full text-center lg:text-left">
                         <button class="uppercase w-full lg:w-[initial] md:max-w-[40rem] lg:min-w-[12rem] font-[600] py-3 text-white rounded-md bg-indigo-600" type="submit">send now</button>
@@ -63,7 +68,7 @@
             top: 50%;
             transform: translateY(-50%);
             box-shadow: 0 0 10px #2227;
-            clip-path: inset(0px -10px 0px 0px);
+            clip-path: inset(0px -20px 0px 0px);
         }
     }
 

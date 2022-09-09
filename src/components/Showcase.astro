@@ -7,6 +7,7 @@ const {
     button = "Start a Project",
     subTitle = "If you are selling property, you may have to provide the buyer with an up-to-date survey of your property",
     flip = false,
+    loading = "eager",
     img = {img: ShowcaseImg, style:'p-0'}
 } = Astro.props;
 ---
@@ -20,5 +21,5 @@ const {
             <a href="/contact/#form" class="text-[1rem] md:text-[1.075rem] lg:text-[1.15rem] 2xl:text-[1.25rem] text-white shadow-md h-fit md:justify-self-start px-7 py-4 2xl:px-9 2xl:py-5 shadow-md uppercase font-bold bg-indigo-500 rounded-full hover:bg-indigo-600 active:scale-95 transition">{button}</a>
         </div>
     </div>
-    <img class={`lg:col-span-7 ${img.style}`} src={img.img} alt="illustration of theodolite and arial surveys">
+    <img class={`lg:col-span-7 ${img.style}`} src={img.img} alt="illustration of theodolite and arial surveys" loading={loading}>
 </div>
