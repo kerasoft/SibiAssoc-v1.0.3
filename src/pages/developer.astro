@@ -1,10 +1,24 @@
+---
+import Layout from "../layouts/Layout.astro"
+import '/src/base.css'
 
-<div class="container mx-auto mt-24">
-    <h2 class="text-3xl mb-3 font-[500]">Verson: v1.0.3</h2>
+---
 
-    <h3 class="text-2xl text-rose-500 mb-12">This Application is built with <span class="text-slate-600 font-[600]">Astro Js</span> and <span class="text-slate-600 font-[600]">Tailwind UI</span></h3>
+<Layout title="Dev" hide>
+    <div class="h-screen flex justify-center items-center">
+        <div class="text-center h-[70vh] p-8 md:px-12">
+            <h2 class="text-2xl lg:text-3xl text-gray-700 pb-4">This webApp is built with <span class="font-[600] text-rose-500">Astro JS</span> and <span class="font-[600] text-sky-500">Tailwind CSS</span></h2>
+            <p class="text-[1.3rem] lg:text-2xl mb-16">Version: v1.0.3</p>
+            <a class="text-2xl border-2 p-3 px-6 border-gray-800 text-gray-800" href="https://github.com/kerasoft/SibiAssoc-v1.0.3"><i class="fa-brands fa-github pr-3"></i>GitHub </a>
+            <p class="text-[1.4rem] lg:text-2xl mt-10 mb-10">Made by Paul and Cory @ <a class="text-purple-500 font-[600]" href="https://www.kerasoft.in">Kerasoft</a></p>
+           <a class="text-3xl" href="/"><i class="fa-solid fa-arrow-rotate-left pr-2"></i></a>
+        </div>
+    </div>
+</Layout>
 
-    <a class="p-3 px-5 bg-black text-xl text-white rounded-lg mr-10" href="https://github.com/kerasoft/SibiAssoc-v1.0.3">GitHub Repo</a>
-    <i class="fa-solid fa-house-person-return"></i>
-    <a class="text-2xl lg:text-[1.6rem] 2xl:text-[1.75rem] font-[400]" href="/">SIBI<span class="text-purple-500">Associates</span></a>
-</div>
+
+<style>
+    * {
+        font-family: monospace;
+    }
+</style>

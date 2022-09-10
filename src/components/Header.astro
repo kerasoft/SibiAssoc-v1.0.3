@@ -1,5 +1,9 @@
-<div class="bg-gray-50 shadow-md z-20 mb-4 sticky w-full top-0 opacity-[.9]">
-    <div class="flex pt-6 pb-3 px-6 container mx-auto">
+---
+const { hide } = Astro.props
+---
+
+<div class={`bg-gray-50 shadow-md z-20 mb-4 sticky w-full top-0 opacity-[.9 ${hide && 'hidden'}`}>
+    <div class="flex pt-5 lg:pt-6 pb-1 lg:pb-3 px-6 container mx-auto">
         <div class="flex-1">
             <p class="text-2xl lg:text-[1.6rem] 2xl:text-[1.75rem] font-[400]">SIBI<span class="text-purple-500">Associates</span></p>
         </div>

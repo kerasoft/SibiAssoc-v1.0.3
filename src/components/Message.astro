@@ -1,0 +1,17 @@
+---
+const {
+    img = '/src/images/404.webp', 
+    msg = "Sorry, page not found!", 
+    btnBgColor = 'bg-[#bc373f]'
+} = Astro.props
+---
+
+<div>
+    <div class="h-[85vh] flex justify-center items-center">
+        <div class="text-center flex flex-col items-center">
+            <img src={img} class="w-full w-5/6 sm:w-4/5 md:w-3/5 lg:w-1/2" alt={Astro.props.title}>
+            <h2 class="mb-6 text-2xl sm:text-3xl text-slate-700 tracking-wider">{msg}</h2>
+            <a class={`uppercase shadow-md p-4 px-6 rounded-lg text-white text-[1rem] md:text-xl font-[600] tracking-wider ${btnBgColor}`} href="/">back to home</a>
+        </div>
+    </div>
+</div>
