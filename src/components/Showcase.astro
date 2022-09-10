@@ -13,13 +13,13 @@ const {
 ---
 
 <div class="grid grid-cols-1 lg:grid-cols-12 items-end container mx-auto mb-5 lg:min-h-[78vh]">
-    <div class={`flex flex-col justify-center col-span-5 gap-2 lg:gap-4 text-center lg:text-left pb-10 px-4 lg:pl-7 xl:pl-10 ${flip && 'lg:order-last'}`}>
+    <div class={`flex flex-col justify-center col-span-5 gap-2 lg:gap-4 text-center lg:text-left px-4 lg:pl-7 xl:pl-10 lg:pb-10 2xl:pb-16 ${flip && 'lg:order-last'}`}>
         <h1 class={title ? "text-3xl font-[900] text-slate-600 md:text-4xl lg:text-4xl 2xl:text-5xl mb-4 mt-10 lg:mt-0" : "hidden"}>{title}</h1>
         <p class=" text-[1.25rem] md:text-2xl lg:text-[1.5rem] 2xl:text-[1.65rem] font-[300]">{subTitle}</p>
         <p class={content ? "text-[1.1rem] md:text-2xl font-[400] lg:text-[1.3rem] lg:text-[1.5rem] text-slate-700" : "hidden"}>{content}</p>
-        <div class={button ? "mt-[6vw] md:mt-[1.7rem] 2xl:mb-[.7rem]" : "hidden"}>
+        <div class={button ? "mt-[6vw] md:mt-[1.7rem] 2xl:mt-[2.7rem] 2xl:mb-[.7rem]" : "hidden"}>
             <a href="/contact/#form" class="text-[1rem] md:text-[1.075rem] lg:text-[1.15rem] 2xl:text-[1.25rem] text-white shadow-md h-fit md:justify-self-start px-7 py-4 2xl:px-9 2xl:py-5 shadow-md uppercase font-bold bg-indigo-500 rounded-full hover:bg-indigo-600 active:scale-95 transition">{button}</a>
         </div>
     </div>
-    <img class={`lg:col-span-7 ${img.style}`} src={img.img} alt="illustration of theodolite and arial surveys" loading={loading}>
+    <img class={`lg:col-span-7 mt-10 lg:mt-0 ${img.style}`} src={img.img} alt="illustration of theodolite and arial surveys" loading={loading}>
 </div>

@@ -33,19 +33,19 @@
                     <input name="bot-field" class="hidden">
                     <div class="mb-3 lg:mb-6">
                         <label for="name" class="block text-[1.25rem] lg:text-[1.4rem] mb-1 lg:mb-2 pl-4 text-slate-600">Name</label>
-                        <input class="border-[1px] border-indigo-500 w-full rounded-md p-2 lg:p-3 text-xl placeholder:text-[1.2rem] lg:placeholder:text-[1.4rem]" type="text" placeholder="John Doe" id="name" name="Name">
+                        <input class="border-[1px] border-indigo-500 w-full rounded-md p-2 lg:p-3 text-xl placeholder:text-[1.2rem] lg:placeholder:text-[1.4rem]" type="text" placeholder="John Doe" id="name" name="Name" required>
                     </div>
                     <div class="mb-3 lg:mb-6">
                         <label for="email" class="block text-[1.25rem] lg:text-[1.4rem] mb-1 lg:mb-2 pl-4 text-slate-600">Email</label>
-                        <input class="border-[1px] border-indigo-500 w-full rounded-md p-2 lg:p-3 text-xl placeholder:text-[1.2rem] lg:placeholder:text-[1.4rem]" type="email" placeholder="john@company.com" id="email" name="Email">
+                        <input class="border-[1px] border-indigo-500 w-full rounded-md p-2 lg:p-3 text-xl placeholder:text-[1.2rem] lg:placeholder:text-[1.4rem]" type="email" placeholder="john@company.com" id="email" name="Email" required>
                     </div>
                     <div class="mb-3 lg:mb-6">
                         <label for="phone" class="block text-[1.25rem] lg:text-[1.4rem] mb-1 lg:mb-2 pl-4 text-slate-600">Phone</label>
-                        <input class="border-[1px] border-indigo-500 w-full rounded-md p-2 lg:p-3 text-xl placeholder:text-[1.2rem] lg:placeholder:text-[1.4rem]" type="number" placeholder="9447123456" id="phone" name="Phone number">
+                        <input class="border-[1px] border-indigo-500 w-full rounded-md p-2 lg:p-3 text-xl placeholder:text-[1.2rem] lg:placeholder:text-[1.4rem]" type="number" placeholder="9447123456" id="phone" name="Phone number" required>
                     </div>
                     <div class="mb-6">
                         <label class="block text-[1.25rem] lg:text-[1.4rem] mb-1 lg:mb-2 pl-4 text-slate-600" for="message">Message</label>
-                        <textarea class="p-2 border-[1px] rounded-md border-indigo-500 w-full placeholder:text-[1.2rem] lg:placeholder:text-[1.4rem]" id="message" cols="30" rows="5" placeholder="Tell us how can we help you" name="Message"></textarea>
+                        <textarea class="p-2 border-[1px] rounded-md border-indigo-500 w-full placeholder:text-[1.2rem] lg:placeholder:text-[1.4rem]" id="message" cols="30" rows="5" placeholder="Tell us how can we help you" name="Message" required minlength="30" maxlength="400"></textarea>
                     </div>
                     <div class="w-full text-center lg:text-left">
                         <button class="uppercase w-full lg:w-[initial] md:max-w-[40rem] lg:min-w-[12rem] font-[600] py-3 text-white rounded-md bg-indigo-600" type="submit">send now</button>

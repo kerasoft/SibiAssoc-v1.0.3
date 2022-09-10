@@ -4,20 +4,22 @@ import Showcase from "../components/Showcase.astro";
 import Address from "../components/Address.astro";
 import ShowcaseImg2 from '../images/showcase-image-2.webp'
 import '/src/base.css'
+import Banner from "../components/Banner.astro";
 ---
 
 
 <Layout>
     <div class="flex flex-col justify-center container mx-auto">
         <Showcase />
+        <Banner />
         <Showcase 
             flip
             title = "Why Land Surveying?"
             subTitle = "Land surveying is mainly done to identify property boundaries and it is used for the purposes of selling the property, leasing out the property or for enabling construction of buildings."
-            content = "Land surveyors are also involved in drafting legal descriptions of land parcels. The most common type of surveying is cadastral surveying, which involves measuring and registering land parcels to enable ownership and usage rights to be established and maintained."
+            content = "Land surveyors are also involved in drafting legal descriptions of land parcels. The most common type of surveying is cadastral surveying, which involves measuring and registering."
             button = {null}
             loading = "lazy"
-            img = {{img:ShowcaseImg2, style:'rounded-t-full p-4 lg:p-12 lg:mt-10 lg:pb-8'}}
+            img = {{img:ShowcaseImg2, style:'p-4 lg:p-6 rounded-lg mt-[1rem] md:mt-12 lg:mt-10 lg:pb-8'}}
         />
         <Address />
     </div>
