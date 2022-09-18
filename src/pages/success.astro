@@ -1,14 +1,21 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Message from '../components/Message.astro'
-import SuccessImg from '../images/success.webp'
-import '/src/base.css'
+import Message from '../components/Message.astro';
+import SuccessImg from '../images/success.webp';
+import '/src/base.css';
 ---
 
-<Layout title='Success' hide >
+<Layout title='Success' hide>
     <Message 
         img = {SuccessImg} 
-        msg = "Thank you, We'll get back to you shortly"
         btnBgColor = 'bg-[#70bb3f]'
     />
 </Layout>
+
+<script type="text/javascript">
+    const text = (document.referrer).toString();
+    const messageEl = document.getElementById('message');
+    text.includes('contact') 
+    ? messageEl.innerHTML = "Thank you, We'll get back to you shortly 😊" 
+    : messageEl.innerHTML = "Thank you for your valuable feedback 😊";
+</script>

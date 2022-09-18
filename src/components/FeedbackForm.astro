@@ -1,0 +1,22 @@
+<div class="relative border-t-2 border-[#006633] p-4 mt-16 mb-4">
+    <h3 class="text-3xl font-[600] absolute ml-6 px-2 -top-6 bg-white inline-block text-[#006633]">Quick Feedback</h3>
+    <p class="mb-3 lg:mb-7 text-center md:text-left">If you've recently visited us or had a survey with us, kindly throw in a quick feedback</p>
+    
+    <form class="px-2" method="POST" onsubmit="submit" data-netlify="true" name="Feedback" data-netlify-honeypot="bot field" action="/success">
+        <input name="bot-field" class="hidden">
+        <div class="grid md:grid-cols-2 md:gap-8 md:px-4 py-2">
+            <div class="flex flex-col gap-4 md:gap-6">
+                <input class="border-[1px] rounded p-3 border-[#006633] text-[1.05rem]" type="text" name="Name" id="name" placeholder="Name" required>
+                <input class="border-[1px] rounded p-3 border-[#006633] text-[1.05rem]" type="text" name="Email" id="email" placeholder="Email" required>
+                <input class="border-[1px] rounded p-3 border-[#006633] text-[1.05rem]" type="text" name="Phone" id="phone" placeholder="Contact" required>
+            </div>
+            <div class="my-4 md:my-0">
+                <textarea class="w-full h-[150px] md:h-full border-[1px] rounded p-3 border-[#006633] text-[1.05rem]" name="Feeback" id="feedback" placeholder="Share us your experience" required></textarea>
+            </div>
+        </div>
+        <div class="flex md:justify-end mt-2 md:mt-4 md:px-4">
+            <button type="submit" class=" w-full md:w-[initial] text-[#feffee] bg-[#006633] active:bg-[#008833] font-[400] tracking-wider text-[1.2rem] p-2 px-[5vw] rounded">FEED</button>
+        </div>
+    </form>
+    
+</div>

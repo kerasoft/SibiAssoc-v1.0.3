@@ -41,7 +41,7 @@ Inside of your Astro project, you'll see the following folders and files:
 
 
 #### About the dev
-  Paulson Jose - code
+  Paulson Jose - code  
   Cory Wilson - design
 
 [kerasoft](https://kerasoft.in)
