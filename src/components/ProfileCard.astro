@@ -1,0 +1,71 @@
+---
+const {
+    mt = '', 
+    absPosition = 'lg:left-[-2rem] xl:left-[-2.5rem]', 
+    flexDir = 'lg:flex-row', 
+    flexDirImg = '', 
+    bg = 'bg-[#eecb4b]',
+    iconColor = 'text-gray-800',
+    imgSrc = '/src/images/dummy-profile-4.png', 
+    title = 'Senior Surveyor',
+    name = 'SIBI PAUL',
+    desc = 'Founder and senior survey specialist, has an immaculate field experience of 15+ years',
+    profileOrder = 'self-end',
+} = Astro.props;
+---
+
+<div class={`relative ${profileOrder} ${mt}`}>
+    <div class="absolute inset-0 bg-[#fefefe9f] z-[-1]"></div>
+    <div class={`profileContainer lg:relative flex flex-col-reverse shadow-lg mt-5 lg:mt-0 lg:justify-between lg:rounded-xl ${flexDir}`}>
+        <div class={`flex imageContainer relative h-1/2 lg:h-full items-end ${flexDirImg}`}>
+            <div class={`yellowBg flex px-4 pt-8 gap-6 text-[1.6rem] ${iconColor} ${bg} ${flexDirImg}`}>
+                <i class="fa-sharp fa-solid fa-phone"></i>
+                <i class="fa-solid fa-envelope"></i>
+            </div>
+            <img class="absolute bottom-0 lg:hidden sm:w-11/12" src={imgSrc} alt="">
+        </div>
+        <div class="text-center h-1/2 lg:h-full lg:w-2/4 px-8 lg:px-4">
+            <h4 class="text-[1.75rem] lg:text-[1.675rem] xl:text-4xl lg:mt-4 font-[300] lg:mb-3">{title}</h4>
+            <p class="text-[1.4rem] lg:text-[1.4rem] xl:text-2xl font-[900] text-gray-600">{name}</p>
+            <p class="mt-2 md:mt-4 text-[1.15rem] md:text-xl lg:text-[1.2rem]">{desc}</p>
+        </div>
+        <img class={`hidden lg:block absolute bottom-0 w-3/4 xl:w-[77%] ${absPosition}`} src={imgSrc} alt="">
+    </div>
+</div>
+
+<style>
+
+    .profileContainer {
+        width: min(100vw, 30rem);
+        height: min(27rem, 82vh);
+    }
+
+    .yellowBg {
+        width: min(50vw, 16rem);
+        height: min(12rem, 28vh);
+    }
+
+    @media (min-width: 1024px) {
+        .profileContainer {
+            width: 40rem;
+            height: 16.5rem;
+        }
+
+        .yellowBg {
+            width: 12rem;
+            height: 100%;
+        }
+    }
+
+    @media (min-width: 1280px) {
+        .profileContainer {
+            width: 43rem;
+            height: 18.2rem;
+        }
+
+        .yellowBg {
+            width: 14rem;
+            height: 100%;
+        }
+    }
+</style>

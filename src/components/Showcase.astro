@@ -12,7 +12,7 @@ const {
 } = Astro.props;
 ---
 
-<div id="showcase" class="showcase grid grid-cols-1 lg:grid-cols-12 items-end container mx-auto mb-5 lg:mt-[3vw] 2xl:mt-[5vw]">
+<div id="showcase" class="showcase grid grid-cols-1 lg:grid-cols-12 items-end container mx-auto mb-5 mt-6 xl:mt-[2vh] 2xl:mt-[6vh]">
     <div class={`flex flex-col justify-center col-span-5 gap-2 lg:gap-4 text-center lg:text-left px-4 lg:pl-7 xl:pl-10 lg:pb-10 2xl:pb-16 ${flip && 'lg:order-last'}`}>
         <h1 class={title ? "text-3xl font-[900] text-slate-600 md:text-4xl lg:text-4xl 2xl:text-5xl mb-4 mt-10 lg:mt-0" : "hidden"}>{title}</h1>
         <p class=" text-[1.25rem] md:text-2xl lg:text-[1.5rem] 2xl:text-[1.65rem] font-[300]">{subTitle}</p>

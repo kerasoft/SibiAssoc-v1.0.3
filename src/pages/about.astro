@@ -1,8 +1,55 @@
 ---
+import Showcase from "../components/Showcase.astro";
 import Layout from "../layouts/Layout.astro"
+import ShowcaseImg from '../images/showcase-image-3.jpg'
 import '/src/base.css'
+import Services from "../components/Services.astro";
+import ProfileCard from "../components/ProfileCard.astro";
 ---
 
 <Layout title="About">
-    <h1>About page</h1>
+    <div class="relative text-center h-[35rem] lg:h-[50vh] flex flex-col justify-center items-center bg-slate-900">
+        <div class="absolute inset-0 opacity-[.08] shadow-lg blur-[2px] bg-[url('/src/images/about-wide-image.jpg')] bg-cover"></div>
+        <div class="absolute">
+            <h1 class="font-[900] text-slate-200 text-4xl sm:text-4xl md:text-5xl lg:text-6xl 2xl:text-7xl mb-5 md:mb-12 mt-[-1.5rem] px-[8vw]">SURVEYORS <span class="hidden md:inline">&nbsp;</span><br class="block md:hidden"/>YOU &nbsp;CAN &nbsp;TRUST</h1>
+            <p class="text-2xl font-[300] text-gray-400 px-6 sm:px-[8vw]">To acquire, create, analyse & manage spatial data to support our clients <br class="hidden lg:block"/> in planning, designing and monitoring infrastructure, assets and materials</p>
+        </div>
+        <div class="absolute gap-[8vw] bottom-[1.8rem] flex justify-around mt-12 text-gray-50 text-[.85rem] md:text-[1rem] font-bold">
+            <a href="#services" class="">SERVICES</a>
+            <a href="#surveyors" class="">SURVEYORS</a>
+            <a href="/" class="">PRICING</a>
+        </div>
+    </div>
+    <div id="surveyors"></div>
+    <div class="relative mt-12 md:mt-[7vw] lg:mt-[10vw] bg-transparent min-h-[60vh]">
+        <div class="z-[-1] inset-0 absolute bg-[url('/src/images/about-showcase-image.jpg')] bg-cover lg:bg-auto xl:bg-cover bg-no-repeat opacity-[.15] bg-bottom md:bg-center lg:bg-top"></div>
+        <div class="lg:container mx-auto flex flex-col-reverse md:justify-between gap-10 lg:gap-8 lg:justify-around ">
+            <ProfileCard 
+                bg='bg-[#000e]' 
+                flexDirImg='justify-end' 
+                imgSrc='/src/images/dummy-profile-1.png'
+                title='Assoc Surveyor'
+                name='AMAL GEORGE'
+                iconColor='text-gray-300'
+                desc='Very skillful, an expert in drafting for quick-action projects, and adding value to the firm since 2016.'
+                profileOrder=''
+                flexDir='lg:flex-row-reverse'
+                absPosition='right-[-1.8rem]'
+                mt='lg:mt-20'
+            />
+            <!-- <div class="border-b-5 border-black"></div> -->
+            <ProfileCard />
+        </div>
+    </div>
+    <div id="services"></div>
+    <Services />
+    <Showcase 
+        flip
+        title = "WE’RE HERE FOR YOU."
+        subTitle = "Find out more about our end-to-end surveying, mapping, geospatial and sub-surface services. Learn how we’ll tailor our expertise and capabilities to ensure you extract maximum value from your project anywhere in North Kerala."
+        content = {null}
+        button = "enquire&nbsp; now"
+        loading = "lazy"
+        img = {{img:ShowcaseImg, style:'rounded-lg mt-[1rem] md:mt-12 lg:mt-10'}}
+    />
 </Layout>
