@@ -5,6 +5,9 @@ import ShowcaseImg from '../images/showcase-image-3.jpg'
 import '/src/base.css'
 import Services from "../components/Services.astro";
 import ProfileCard from "../components/ProfileCard.astro";
+
+import Profile1 from '../images/dummy-profile-1.png'
+import Profile2 from '../images/dummy-profile-4.png'
 ---
 
 <Layout title="About">
@@ -27,7 +30,7 @@ import ProfileCard from "../components/ProfileCard.astro";
             <ProfileCard 
                 bg='bg-[#000e]' 
                 flexDirImg='justify-end' 
-                imgSrc='/src/images/dummy-profile-1.png'
+                imgSrc={Profile1}
                 title='Assoc Surveyor'
                 name='AMAL GEORGE'
                 iconColor='text-gray-300'
@@ -38,7 +41,7 @@ import ProfileCard from "../components/ProfileCard.astro";
                 mt='lg:mt-20'
             />
             <!-- <div class="border-b-5 border-black"></div> -->
-            <ProfileCard />
+            <ProfileCard imgSrc={Profile2} />
         </div>
     </div>
     <div id="services"></div>
