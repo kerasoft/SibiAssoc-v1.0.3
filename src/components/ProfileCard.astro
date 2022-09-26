@@ -12,6 +12,8 @@ const {
     name = 'SIBI PAUL',
     desc = 'Founder and senior survey specialist, has an immaculate field experience of 15+ years',
     profileOrder = 'self-end',
+    email,
+    phoneNumber,
 } = Astro.props;
 ---
 
@@ -19,9 +21,11 @@ const {
     <div class="absolute inset-0 bg-[#fefefe9f] z-[-1]"></div>
     <div class={`profileContainer lg:relative flex flex-col-reverse shadow-lg mt-5 lg:mt-0 lg:justify-between lg:rounded-xl ${flexDir}`}>
         <div class={`flex imageContainer relative h-1/2 lg:h-full items-end ${flexDirImg}`}>
-            <div class={`yellowBg flex px-4 pt-8 gap-6 text-[1.6rem] ${iconColor} ${bg} ${flexDirImg}`}>
-                <i class="fa-sharp fa-solid fa-phone"></i>
-                <i class="fa-solid fa-envelope"></i>
+            <div class={`relative yellowBg flex px-4 pt-8 gap-6 text-[1.6rem] ${iconColor} ${bg} ${flexDirImg}`}>
+                <div class="absolute z-10">
+                    <a class="mr-4" href={`tel:0091${phoneNumber}`}><i class="fa-sharp fa-solid fa-phone"></i></a>
+                    <a href={`mailto:${email}`}><i class="fa-solid fa-envelope"></i></a>
+                </div>
             </div>
             <img class="absolute bottom-0 lg:hidden sm:w-11/12" src={imgSrc} alt="">
         </div>

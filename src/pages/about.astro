@@ -5,6 +5,7 @@ import ShowcaseImg from '../images/showcase-image-3.jpg'
 import '/src/base.css'
 import Services from "../components/Services.astro";
 import ProfileCard from "../components/ProfileCard.astro";
+import Pricing from '../components/Pricing.astro'
 
 import Profile1 from '../images/dummy-profile-1.png'
 import Profile2 from '../images/dummy-profile-4.png'
@@ -20,7 +21,7 @@ import Profile2 from '../images/dummy-profile-4.png'
         <div class="absolute gap-[8vw] bottom-[1.8rem] flex justify-around mt-12 text-gray-50 text-[.85rem] md:text-[1rem] font-bold">
             <a href="#services" class="">SERVICES</a>
             <a href="#surveyors" class="">SURVEYORS</a>
-            <a href="/" class="">PRICING</a>
+            <a href="#pricing" class="">PRICING</a>
         </div>
     </div>
     <div id="surveyors"></div>
@@ -39,13 +40,21 @@ import Profile2 from '../images/dummy-profile-4.png'
                 flexDir='lg:flex-row-reverse'
                 absPosition='right-[-1.8rem]'
                 mt='lg:mt-20'
+                phoneNumber='9495386162'
+                email='test@testmail.com'
             />
             <!-- <div class="border-b-5 border-black"></div> -->
-            <ProfileCard imgSrc={Profile2} />
+            <ProfileCard
+                imgSrc={Profile2}
+                phoneNumber='9446835675'
+                email='test@testmail.com'
+            />
         </div>
     </div>
     <div id="services"></div>
     <Services />
+    <div id='pricing'></div>
+    <Pricing />
     <Showcase 
         flip
         title = "WE’RE HERE FOR YOU."
@@ -53,6 +62,6 @@ import Profile2 from '../images/dummy-profile-4.png'
         content = {null}
         button = "enquire&nbsp; now"
         loading = "lazy"
-        img = {{img:ShowcaseImg, style:'rounded-lg mt-[1rem] md:mt-12 lg:mt-10'}}
+        img = {{img:ShowcaseImg, style:'rounded-lg mt-[1.4rem] md:mt-12 lg:mt-10'}}
     />
 </Layout>
